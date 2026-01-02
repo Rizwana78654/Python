@@ -1450,4 +1450,815 @@ Strings cannot be changed after creation.
 <pre>
 s = "Python"
 # s[0] = "J"  ❌ Error
+    </pre>
+
 <hr>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+<h1> String Methods in Python</h1>
+<hr>
+
+<h2> What are String Methods?</h2>
+<p>
+<b>String methods</b> are built-in functions that operate on strings.
+They help in manipulating and processing string data such as converting case,
+searching text, splitting strings, and replacing values.
+</p>
+
+<p><b>Note:</b> Strings are <b>immutable</b>, so methods return a new string.</p>
+
+<hr>
+
+<h2> Common String Methods</h2>
+
+<table border="1" cellpadding="8">
+<tr>
+    <th>Method</th>
+    <th>Description</th>
+    <th>Example</th>
+</tr>
+
+<tr>
+    <td>upper()</td>
+    <td>Converts string to uppercase</td>
+    <td>"python".upper()</td>
+</tr>
+
+<tr>
+    <td>lower()</td>
+    <td>Converts string to lowercase</td>
+    <td>"PYTHON".lower()</td>
+</tr>
+
+<tr>
+    <td>title()</td>
+    <td>Capitalizes first letter of each word</td>
+    <td>"hello world".title()</td>
+</tr>
+
+<tr>
+    <td>capitalize()</td>
+    <td>Capitalizes first character</td>
+    <td>"python".capitalize()</td>
+</tr>
+
+<tr>
+    <td>Title()</td>
+    <td>title will convert each word first letter into capital remaining all are small</td>
+    <td>" python ".tittle()</td>
+</tr>
+
+<tr>
+    <td>lowerp()</td>
+    <td>lower function is used to convert into small letter</td>
+    <td>" python".lower()</td>
+</tr>
+
+<tr>
+    <td>upper()</td>
+    <td>upper function is used to convert into capital letter</td>
+    <td>"python ".upper()</td>
+</tr>
+
+<tr>
+    <td>isupper()</td>
+    <td>will return the boolean outcome</td>
+    <td>"python " .isupper()</td>
+</tr>
+
+<tr>
+    <td> islower</td>
+    <td>will return the boolean outcome</td>
+    <td>"python ".islower()</td>
+</tr>
+<tr>
+    <td>lstrip()</td>
+    <td>Removes left spaces</td>
+    <td>" python".lstrip()</td>
+</tr>
+
+<tr>
+    <td>rstrip()</td>
+    <td>Removes right spaces</td>
+    <td>"python ".rstrip()</td>
+</tr>
+<tr>
+    <td>join()</td>
+    <td>Joins list elements into string</td>
+    <td>"-".join(["a","b"])</td>
+</tr>
+
+<tr>
+    <td>find()</td>
+    <td>Finds index of substring</td>
+    <td>"python".find("t")</td>
+</tr>
+
+<tr>
+    <td>count()</td>
+    <td>Counts occurrences</td>
+    <td>"banana".count("a")</td>
+</tr>
+
+<tr>
+    <td>startswith()</td>
+    <td>Checks starting characters</td>
+    <td>"python".startswith("py")</td>
+</tr>
+
+<tr>
+    <td>endswith()</td>
+    <td>Checks ending characters</td>
+    <td>"python".endswith("on")</td>
+</tr>
+
+<tr>
+    <td>isdigit()</td>
+    <td>Checks if all characters are digits</td>
+    <td>"123".isdigit()</td>
+</tr>
+
+<tr>
+    <td>isalpha()</td>
+    <td>Checks if all characters are alphabets</td>
+    <td>"abc".isalpha()</td>
+</tr>
+
+<tr>
+    <td>isalnum()</td>
+    <td>Checks alphanumeric characters</td>
+    <td>"abc123".isalnum()</td>
+</tr>
+<tr>
+    <td>isalpha()</td>
+    <td>do all  are alphabets</td>
+    <td>"python ".isalpha()</td>
+</tr>
+<tr>
+    <td>replace()</td>
+    <td>replace a character</td>
+    <td>"python ".replace()</td>
+</tr>
+  <tr>
+    <td>strip()</td>
+    <td>Removes leading and trailing spaces</td>
+</tr>  
+</table>
+
+<hr>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+</head>
+
+<body>
+
+<h1>  Python Lists</h1>
+<hr>
+
+<h2> What is a List?</h2>
+<p>
+A <b>list</b> is a built-in data type in Python used to store multiple values in a single variable.
+Lists are <b>ordered</b>, <b>mutable</b> (changeable), and allow <b>duplicate elements</b>.
+</p>
+
+<hr>
+
+<h2> Creating a List</h2>
+
+<pre>
+numbers = [1, 2, 3, 4]
+names = ["Python", "Java", "C"]
+mixed = [1, "Hello", 3.5]
+</pre>
+
+<hr>
+
+<h2> Accessing List Elements</h2>
+
+<pre>
+fruits = ["apple", "banana", "cherry"]
+
+print(fruits[0])   # apple
+print(fruits[-1])  # cherry
+</pre>
+
+<hr>
+
+<h2> Modifying List Elements</h2>
+
+<pre>
+fruits[1] = "orange"
+print(fruits)
+</pre>
+
+<hr>
+
+<h2> List Built-in Methods</h2>
+
+<table border="1" cellpadding="8">
+<tr>
+    <th>Method</th>
+    <th>Description</th>
+    <th>Example</th>
+</tr>
+
+<tr>
+    <td>append()</td>
+    <td>Adds element at end</td>
+    <td>list.append(10)</td>
+</tr>
+
+<tr>
+    <td>insert()</td>
+    <td>Adds element at index</td>
+    <td>list.insert(1,5)</td>
+</tr>
+
+<tr>
+    <td>extend()</td>
+    <td>Adds multiple elements</td>
+    <td>list.extend([1,2])</td>
+</tr>
+
+<tr>
+    <td>remove()</td>
+    <td>Removes specified element</td>
+    <td>list.remove(3)</td>
+</tr>
+
+<tr>
+    <td>pop()</td>
+    <td>Removes element by index</td>
+    <td>list.pop(1)</td>
+</tr>
+
+<tr>
+    <td>clear()</td>
+    <td>Removes all elements</td>
+    <td>list.clear()</td>
+</tr>
+
+<tr>
+    <td>index()</td>
+    <td>Returns index of element</td>
+    <td>list.index(5)</td>
+</tr>
+
+<tr>
+    <td>count()</td>
+    <td>Counts occurrences</td>
+    <td>list.count(2)</td>
+</tr>
+
+<tr>
+    <td>sort()</td>
+    <td>Sorts the list</td>
+    <td>list.sort()</td>
+</tr>
+
+<tr>
+    <td>reverse()</td>
+    <td>Reverses the list</td>
+    <td>list.reverse()</td>
+</tr>
+
+<tr>
+    <td>copy()</td>
+    <td>Returns a copy of list</td>
+    <td>list.copy()</td>
+</tr>
+
+</table>
+
+<hr>
+
+<h2> Example Program Using List Methods</h2>
+
+<pre>
+numbers = [10, 20, 30]
+
+numbers.append(40)
+numbers.insert(1, 15)
+numbers.remove(20)
+numbers.sort()
+
+print(numbers)
+</pre>
+
+<hr>
+
+<h2> List Built-in Functions</h2>
+
+<ul>
+    <li><b>len()</b> – Returns number of elements</li>
+    <li><b>max()</b> – Returns maximum value</li>
+    <li><b>min()</b> – Returns minimum value</li>
+    <li><b>sum()</b> – Returns sum of elements</li>
+    <li><b>type()</b> – Returns data type</li>
+</ul>
+
+<hr>
+
+<h2> Mutable Nature of Lists</h2>
+
+<pre>
+a = [1, 2, 3]
+a[0] = 100
+print(a)
+</pre>
+
+<hr>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+</head>
+
+<body>
+
+<h1>  Python Tuples</h1>
+<hr>
+
+<h2> What is a Tuple?</h2>
+<p>
+A <b>tuple</b> is a built-in data type in Python used to store multiple values in a single variable.
+Tuples are <b>ordered</b>, <b>immutable</b> (cannot be changed), and allow <b>duplicate values</b>.
+</p>
+
+<hr>
+
+<h2> Creating Tuples</h2>
+
+<pre>
+numbers = (1, 2, 3, 4)
+names = ("Python", "Java", "C")
+single = (10,)      # single element tuple
+</pre>
+
+<hr>
+
+<h2> Accessing Tuple Elements</h2>
+
+<pre>
+colors = ("red", "green", "blue")
+
+print(colors[0])    # red
+print(colors[-1])   # blue
+</pre>
+
+<hr>
+
+<h2> Tuple Slicing</h2>
+
+<pre>
+nums = (10, 20, 30, 40, 50)
+
+print(nums[1:4])    # (20, 30, 40)
+</pre>
+
+<hr>
+
+<h2> Tuple Immutability</h2>
+<p>
+Tuples cannot be modified after creation.
+</p>
+
+<pre>
+t = (1, 2, 3)
+# t[0] = 10   ❌ This will cause an error
+</pre>
+
+<hr>
+
+<h2> Tuple Methods</h2>
+
+<table border="1" cellpadding="8">
+<tr>
+    <th>Method</th>
+    <th>Description</th>
+    <th>Example</th>
+</tr>
+
+<tr>
+    <td>count()</td>
+    <td>Returns number of occurrences</td>
+    <td>(1,2,2,3).count(2)</td>
+</tr>
+
+<tr>
+    <td>index()</td>
+    <td>Returns index of element</td>
+    <td>(10,20,30).index(20)</td>
+</tr>
+
+</table>
+
+<hr>
+
+<h2> Tuple Built-in Functions</h2>
+
+<ul>
+    <li><b>len()</b> – Returns number of elements</li>
+    <li><b>max()</b> – Returns maximum value</li>
+    <li><b>min()</b> – Returns minimum value</li>
+    <li><b>sum()</b> – Returns sum of elements</li>
+    <li><b>type()</b> – Returns data type</li>
+</ul>
+
+<hr>
+
+<h2> Converting Tuple to List</h2>
+
+<pre>
+t = (1, 2, 3)
+lst = list(t)
+print(lst)
+</pre>
+
+<hr>
+
+<h2> Tuple Packing and Unpacking</h2>
+
+<pre>
+# Packing
+t = 10, 20, 30
+
+# Unpacking
+a, b, c = t
+print(a, b, c)
+</pre>
+
+<hr>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+</head>
+
+<body>
+
+<h1> Sets in Python</h1>
+<hr>
+
+<h2> What is a Set?</h2>
+<p>
+A <b>set</b> is a built-in data type in Python used to store multiple values in a single variable.
+Sets are <b>unordered</b>, <b>mutable</b>, and do <b>not allow duplicate values</b>.
+</p>
+
+<hr>
+
+<h2> Creating Sets</h2>
+
+<pre>
+numbers = {1, 2, 3, 4}
+names = {"Python", "Java", "C"}
+duplicates = {1, 2, 2, 3}
+print(duplicates)   # {1, 2, 3}
+</pre>
+
+<hr>
+
+<h2> Accessing Set Elements</h2>
+<p>
+Sets are unordered, so elements cannot be accessed using index.
+Use a loop to access elements.
+</p>
+
+<pre>
+fruits = {"apple", "banana", "cherry"}
+
+for item in fruits:
+    print(item)
+</pre>
+
+<hr>
+
+<h2> Adding and Removing Elements</h2>
+
+<pre>
+s = {1, 2, 3}
+
+s.add(4)
+s.remove(2)
+s.discard(5)   # no error if element not found
+print(s)
+</pre>
+
+<hr>
+
+<h2> Set Methods</h2>
+
+<table border="1" cellpadding="8">
+<tr>
+    <th>Method</th>
+    <th>Description</th>
+    <th>Example</th>
+</tr>
+
+<tr>
+    <td>add()</td>
+    <td>Adds element to set</td>
+    <td>s.add(5)</td>
+</tr>
+
+<tr>
+    <td>remove()</td>
+    <td>Removes specified element</td>
+    <td>s.remove(2)</td>
+</tr>
+
+<tr>
+    <td>discard()</td>
+    <td>Removes element without error</td>
+    <td>s.discard(10)</td>
+</tr>
+
+<tr>
+    <td>pop()</td>
+    <td>Removes random element</td>
+    <td>s.pop()</td>
+</tr>
+
+<tr>
+    <td>clear()</td>
+    <td>Removes all elements</td>
+    <td>s.clear()</td>
+</tr>
+
+</table>
+
+<hr>
+
+<h2> Set Operations</h2>
+
+<table border="1" cellpadding="8">
+<tr>
+    <th>Operation</th>
+    <th>Symbol</th>
+    <th>Example</th>
+</tr>
+
+<tr>
+    <td>Union</td>
+    <td>|</td>
+    <td>a | b</td>
+</tr>
+
+<tr>
+    <td>Intersection</td>
+    <td>&</td>
+    <td>a & b</td>
+</tr>
+
+<tr>
+    <td>Difference</td>
+    <td>-</td>
+    <td>a - b</td>
+</tr>
+
+<tr>
+    <td>Symmetric Difference</td>
+    <td>^</td>
+    <td>a ^ b</td>
+</tr>
+
+</table>
+
+<hr>
+
+<h2> Example Program</h2>
+
+<pre>
+a = {1, 2, 3}
+b = {3, 4, 5}
+
+print("Union:", a | b)
+print("Intersection:", a & b)
+print("Difference:", a - b)
+print("Symmetric Difference:", a ^ b)
+</pre>
+
+<hr>
+
+<h2> Frozen Set</h2>
+<p>
+A <b>frozenset</b> is an immutable version of a set.
+</p>
+
+<pre>
+fs = frozenset([1, 2, 3])
+print(fs)
+</pre>
+
+<hr>
+
+<h2> Built-in Functions with Sets</h2>
+
+<ul>
+    <li><b>len()</b> – Returns number of elements</li>
+    <li><b>max()</b> – Returns maximum value</li>
+    <li><b>min()</b> – Returns minimum value</li>
+    <li><b>sum()</b> – Returns sum of elements</li>
+    <li><b>type()</b> – Returns data type</li>
+</ul>
+
+<hr>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+</head>
+
+<body>
+
+<h1>Dictionaries in Python</h1>
+<hr>
+
+<h2> What is a Dictionary?</h2>
+<p>
+A <b>dictionary</b> is a built-in data type in Python used to store data in
+<b>key–value pairs</b>.
+Dictionaries are <b>unordered</b>, <b>mutable</b>, and keys must be <b>unique</b>.
+</p>
+
+<hr>
+
+<h2> Creating a Dictionary</h2>
+
+<pre>
+student = {
+    "name": "Rizwana",
+    "age": 21,
+    "course": "Python"
+}
+</pre>
+
+<hr>
+
+<h2> Accessing Dictionary Elements</h2>
+
+<pre>
+print(student["name"])
+print(student.get("age"))
+</pre>
+
+<hr>
+
+<h2> Modifying Dictionary</h2>
+
+<pre>
+student["age"] = 22
+student["city"] = "Hyderabad"
+print(student)
+</pre>
+
+<hr>
+
+<h2> Removing Elements</h2>
+
+<pre>
+student.pop("city")
+del student["course"]
+print(student)
+</pre>
+
+<hr>
+
+<h2> Dictionary Methods</h2>
+
+<table border="1" cellpadding="8">
+<tr>
+    <th>Method</th>
+    <th>Description</th>
+    <th>Example</th>
+</tr>
+
+<tr>
+    <td>keys()</td>
+    <td>Returns all keys</td>
+    <td>dict.keys()</td>
+</tr>
+
+<tr>
+    <td>values()</td>
+    <td>Returns all values</td>
+    <td>dict.values()</td>
+</tr>
+
+<tr>
+    <td>items()</td>
+    <td>Returns key-value pairs</td>
+    <td>dict.items()</td>
+</tr>
+
+<tr>
+    <td>get()</td>
+    <td>Returns value of key</td>
+    <td>dict.get("name")</td>
+</tr>
+
+<tr>
+    <td>update()</td>
+    <td>Updates dictionary</td>
+    <td>dict.update({"age":25})</td>
+</tr>
+
+<tr>
+    <td>pop()</td>
+    <td>Removes specified key</td>
+    <td>dict.pop("age")</td>
+</tr>
+
+<tr>
+    <td>clear()</td>
+    <td>Removes all items</td>
+    <td>dict.clear()</td>
+</tr>
+
+<tr>
+    <td>copy()</td>
+    <td>Returns a copy</td>
+    <td>dict.copy()</td>
+</tr>
+
+</table>
+
+<hr>
+
+<h2> Looping Through Dictionary</h2>
+
+<pre>
+for key, value in student.items():
+    print(key, ":", value)
+</pre>
+
+<hr>
+
+<h2> Built-in Functions with Dictionary</h2>
+
+<ul>
+    <li><b>len()</b> – Returns number of key-value pairs</li>
+    <li><b>type()</b> – Returns data type</li>
+</ul>
+
+<hr>
+
+<h2> Dictionary with Nested Data</h2>
+
+<pre>
+students = {
+    "s1": {"name": "Asha", "marks": 90},
+    "s2": {"name": "Ravi", "marks": 85}
+}
+</pre>
+
+<hr>
+
+<h2> Difference Between List and Dictionary</h2>
+
+<table border="1" cellpadding="8">
+<tr>
+    <th>List</th>
+    <th>Dictionary</th>
+</tr>
+
+<tr>
+    <td>Stores values only</td>
+    <td>Stores key-value pairs</td>
+</tr>
+
+<tr>
+    <td>Accessed by index</td>
+    <td>Accessed by key</td>
+</tr>
+
+<tr>
+    <td>Ordered</td>
+    <td>Unordered</td>
+</tr>
+
+</table>
+
+<hr>
+
+
+
+
