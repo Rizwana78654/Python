@@ -3570,13 +3570,16 @@ classes and objects, making programs modular, reusable, and easier to maintain.
 <h2>1. Class and Object</h2>
 
 <p>
-- <strong>Class:</strong> A blueprint for creating objects.<br>
-- <strong>Object:</strong> An instance of a class.
+  A <code>class</code> is a blueprint for creating objects.
+It defines properties (attributes) and behaviors (methods).
+<br>
+    An <strong>object</strong> is an instance of a class.
+It has its own data and can use class methods.
 </p>
 
 <h3>Example:</h3>
 
-<pre>
+<pre>    
 class Person:
     def greet(self):
         print("Hello!")
