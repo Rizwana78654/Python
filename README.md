@@ -47,18 +47,17 @@
 <h2 id="intermediate"> Intermediate Python Concepts</h2>
 <ul>
     <li>Looping statements</li>
-    <li>control statements </li>
+    <li>conditional  statements </li>
     <li> Functions</li>
-    <li>Lambda Functions</li>
+    <li>Lambda Functions with map,filter,reduce</li>
+    <li>modularization using functions</li>
     <li>List and Dictionary Comprehensions</li>
-    <li>Recursions</li>
     <li>File Handling</li>
-    <li>Exception Handling</li>
-    <li>Object-Oriented Programming (OOP)</li>
 </ul>
 <h2 id="advanced"> Advanced Python Concepts</h2>
 <ul>
     <li>Exception Handling</li>
+    <li>Oops concepts are </li>
     <li>Class</li>
     <li>Object</li>
     <li>self</li>
@@ -2514,6 +2513,1052 @@ while True:
     <li>Improves readability</li>
     <li>Saves time and effort</li>
 </ul>
+
+<h1>Python Conditional Statements</h1>
+
+<p>
+Conditional statements in Python are used to make decisions.
+They allow a program to execute different blocks of code
+based on whether a condition is <strong>True</strong> or <strong>False</strong>.
+</p>
+
+<hr>
+
+<h2>1. if Statement</h2>
+
+<p>
+The <code>if</code> statement executes a block of code only when
+the given condition is true.
+</p>
+
+<h3>Syntax:</h3>
+
+<pre>
+if condition:
+    statement
+</pre>
+
+<h3>Example:</h3>
+
+<pre>
+num = 10
+if num > 0:
+    print("Positive number")
+</pre>
+
+<hr>
+
+<h2>2. if else Statement</h2>
+
+<p>
+The <code>if else</code> statement executes one block of code
+if the condition is true and another block if it is false.
+</p>
+
+<h3>Syntax:</h3>
+
+<pre>
+if condition:
+    statement
+else:
+    statement
+</pre>
+
+<h3>Example:</h3>
+
+<pre>
+num = -5
+if num > 0:
+    print("Positive")
+else:
+    print("Negative")
+</pre>
+
+<hr>
+
+<h2>3. if elif else Statement</h2>
+
+<p>
+The <code>if elif else</code> statement is used to check
+multiple conditions. The first true condition is executed.
+</p>
+
+<h3>Syntax:</h3>
+
+<pre>
+if condition1:
+    statement
+elif condition2:
+    statement
+else:
+    statement
+</pre>
+
+<h3>Example:</h3>
+
+<pre>
+num = 0
+if num > 0:
+    print("Positive")
+elif num == 0:
+    print("Zero")
+else:
+    print("Negative")
+</pre>
+
+<hr>
+
+<h2>4. Nested if Statement</h2>
+
+<p>
+A nested <code>if</code> statement is an <code>if</code> statement
+inside another <code>if</code> statement.
+</p>
+
+<h3>Example:</h3>
+
+<pre>
+num = 12
+if num > 0:
+    if num % 2 == 0:
+        print("Positive Even Number")
+    else:
+        print("Positive Odd Number")
+else:
+    print("Negative Number")
+</pre>
+
+<hr>
+
+<p>
+Conditional statements help control the flow of a program
+and are essential for decision-making in Python.
+</p>
+
+<h1>Functions in Python</h1>
+
+<p>
+A function in Python is a reusable block of code that performs
+a specific task. Functions improve code reusability, readability,
+and reduce repetition.
+</p>
+
+<hr>
+
+<h2>Defining a Function</h2>
+
+<p>
+Functions are defined using the <code>def</code> keyword.
+</p>
+
+<h3>Syntax:</h3>
+
+<pre>
+def function_name():
+    statements
+</pre>
+
+<h3>Example:</h3>
+
+<pre>
+def greet():
+    print("Hello, Welcome to Python")
+</pre>
+
+<hr>
+
+<h2>Calling a Function</h2>
+
+<p>
+A function is executed by calling its name followed by parentheses.
+</p>
+
+<pre>
+greet()
+</pre>
+
+<hr>
+
+<h1>Types of Functions in Python</h1>
+
+<hr>
+
+<h2>1. Built-in Functions</h2>
+
+<p>
+Built-in functions are provided by Python and can be used
+directly without importing any module.
+</p>
+
+<h3>Examples:</h3>
+
+<pre>
+print("Hello")
+len("Python")
+type(10)
+max(5, 10, 3)
+</pre>
+
+<hr>
+
+<h2>2. User-defined Functions</h2>
+
+<p>
+User-defined functions are functions created by the user
+to perform specific tasks.
+</p>
+
+<h3>Example:</h3>
+
+<pre>
+def add(a, b):
+    return a + b
+
+print(add(10, 20))
+</pre>
+
+<hr>
+
+<h2>1. Functions with Parameters</h2>
+
+<p>
+Parameters allow passing values to functions.
+</p>
+
+<h3>Example:</h3>
+
+<pre>
+def square(num):
+    return num * num
+
+print(square(4))
+</pre>
+
+<hr>
+
+<h2>2. Functions with Return Value</h2>
+
+<p>
+The <code>return</code> statement sends a value back
+to the function caller.
+</p>
+
+<h3>Example:</h3>
+
+<pre>
+def multiply(a, b):
+    return a * b
+
+result = multiply(3, 5)
+print(result)
+</pre>
+
+<hr>
+
+<h2>3. Functions with Default Arguments</h2>
+
+<p>
+Default arguments are used when no value is passed.
+</p>
+
+<h3>Example:</h3>
+
+<pre>
+def greet(name="User"):
+    print("Hello", name)
+
+greet()
+greet("Rizwana")
+</pre>
+
+<hr>
+
+<h2>3. Lambda (Anonymous) Functions</h2>
+
+<p>
+Lambda functions are small, one-line functions without a name.
+</p>
+
+<h3>Example:</h3>
+
+<pre>
+square = lambda x: x * x
+print(square(5))
+</pre>
+
+<hr>
+
+<h2>7. Recursive Functions</h2>
+
+<p>
+A recursive function is a function that calls itself.
+</p>
+
+<h3>Example:</h3>
+
+<pre>
+def factorial(n):
+    if n == 1:
+        return 1
+    else:
+        return n * factorial(n - 1)
+
+print(factorial(5))
+</pre>
+
+<hr>
+
+<p>
+Functions are an essential concept in Python programming
+for writing efficient and structured code.
+</p>
+
+<h1>Lambda Functions with map(), filter(), and reduce()</h1>
+
+<p>
+A <strong>lambda function</strong> is a small anonymous function
+defined using the <code>lambda</code> keyword.
+It can take any number of arguments but only one expression.
+</p>
+
+<hr>
+
+<h2>1. Lambda Function</h2>
+
+<h3>Syntax:</h3>
+
+<pre>
+lambda arguments : expression
+</pre>
+
+<h3>Example:</h3>
+
+<pre>
+square = lambda x: x * x
+print(square(5))
+</pre>
+
+<hr>
+
+<h2>2. map() with Lambda</h2>
+
+<p>
+The <code>map()</code> function applies a function to each
+item in an iterable and returns a map object.
+</p>
+
+<h3>Syntax:</h3>
+
+<pre>
+map(function, iterable)
+</pre>
+
+<h3>Example:</h3>
+
+<pre>
+numbers = [1, 2, 3, 4, 5]
+result = map(lambda x: x * 2, numbers)
+print(list(result))
+</pre>
+
+<p><strong>Output:</strong></p>
+
+<pre>
+[2, 4, 6, 8, 10]
+</pre>
+
+<hr>
+
+<h2>3. filter() with Lambda</h2>
+
+<p>
+The <code>filter()</code> function filters elements from an
+iterable based on a condition.
+</p>
+
+<h3>Syntax:</h3>
+
+<pre>
+filter(function, iterable)
+</pre>
+
+<h3>Example:</h3>
+
+<pre>
+numbers = [1, 2, 3, 4, 5, 6]
+result = filter(lambda x: x % 2 == 0, numbers)
+print(list(result))
+</pre>
+
+<p><strong>Output:</strong></p>
+
+<pre>
+[2, 4, 6]
+</pre>
+
+<hr>
+
+<h2>4. reduce() with Lambda</h2>
+
+<p>
+The <code>reduce()</code> function applies a function cumulatively
+to the elements of an iterable and returns a single value.
+</p>
+
+<p>
+<strong>Note:</strong> <code>reduce()</code> is available in the
+<code>functools</code> module.
+</p>
+
+<h3>Syntax:</h3>
+
+<pre>
+reduce(function, iterable)
+</pre>
+
+<h3>Example:</h3>
+
+<pre>
+from functools import reduce
+
+numbers = [1, 2, 3, 4]
+result = reduce(lambda x, y: x + y, numbers)
+print(result)
+</pre>
+
+<h1>Modularization Using Functions in Python</h1>
+
+<p>
+Modularization is the process of dividing a program into
+smaller, manageable, and reusable parts called
+<strong>modules</strong> or <strong>functions</strong>.
+Using functions helps organize code, improve readability,
+and make maintenance easier.
+</p>
+
+<hr>
+
+<h2>Why Modularization?</h2>
+
+<ul>
+    <li>Makes code easier to understand</li>
+    <li>Reduces code duplication</li>
+    <li>Improves maintainability</li>
+    <li>Encourages code reuse</li>
+</ul>
+
+<hr>
+
+<h2>1. Creating Functions for Modularization</h2>
+
+<p>
+Each function performs a specific task. These functions
+together form a modular program.
+</p>
+
+<h3>Example:</h3>
+
+<pre>
+def add(a, b):
+    return a + b
+
+def subtract(a, b):
+    return a - b
+
+def multiply(a, b):
+    return a * b
+
+def divide(a, b):
+    return a / b
+</pre>
+
+<hr>
+
+<h2>2. Using Modular Functions</h2>
+
+<p>
+Functions can be called whenever needed, reducing repetition.
+</p>
+
+<h3>Example:</h3>
+
+<pre>
+x = 10
+y = 5
+
+print(add(x, y))
+print(subtract(x, y))
+print(multiply(x, y))
+print(divide(x, y))
+</pre>
+
+<hr>
+
+<h2>3. Modular Program Structure</h2>
+
+<p>
+A program can be divided into logical modules using functions.
+</p>
+
+<h3>Example:</h3>
+
+<pre>
+def get_input():
+    return int(input("Enter a number: "))
+
+def process_data(n):
+    return n * n
+
+def display_result(result):
+    print("Result:", result)
+
+num = get_input()
+result = process_data(num)
+display_result(result)
+</pre>
+
+<hr>
+
+<h2>4. Advantages of Modularization Using Functions</h2>
+
+<ul>
+    <li>Easy to debug and test</li>
+    <li>Changes in one function do not affect others</li>
+    <li>Improves team collaboration</li>
+    <li>Enhances program scalability</li>
+</ul>
+
+<hr>
+
+<h1>Comprehensions in Python</h1>
+
+<p>
+Comprehensions provide a short and readable way to create
+new sequences such as lists, sets, and dictionaries.
+They reduce code length and improve clarity.
+</p>
+
+<hr>
+
+<h2>1. List Comprehension</h2>
+
+<p>
+List comprehension is used to create a new list from
+an existing iterable.
+</p>
+
+<h3>Syntax:</h3>
+
+<pre>
+[expression for item in iterable if condition]
+</pre>
+
+<h3>Example:</h3>
+
+<pre>
+numbers = [1, 2, 3, 4, 5]
+squares = [x * x for x in numbers]
+print(squares)
+</pre>
+
+<p><strong>Output:</strong></p>
+
+<pre>
+[1, 4, 9, 16, 25]
+</pre>
+
+<hr>
+
+<h2>2. Set Comprehension</h2>
+
+<p>
+Set comprehension is used to create a set from an iterable.
+It automatically removes duplicate values.
+</p>
+
+<h3>Syntax:</h3>
+
+<pre>
+{expression for item in iterable if condition}
+</pre>
+
+<h3>Example:</h3>
+
+<pre>
+numbers = [1, 2, 2, 3, 4]
+unique_squares = {x * x for x in numbers}
+print(unique_squares)
+</pre>
+
+<p><strong>Output:</strong></p>
+
+<pre>
+{1, 4, 9, 16}
+</pre>
+
+<hr>
+
+<h2>3. Dictionary Comprehension</h2>
+
+<p>
+Dictionary comprehension is used to create a dictionary
+from an iterable.
+</p>
+
+<h3>Syntax:</h3>
+
+<pre>
+{key_expression : value_expression for item in iterable}
+</pre>
+
+<h3>Example:</h3>
+
+<pre>
+numbers = [1, 2, 3, 4]
+square_dict = {x: x * x for x in numbers}
+print(square_dict)
+</pre>
+
+<p><strong>Output:</strong></p>
+
+<pre>
+{1: 1, 2: 4, 3: 9, 4: 16}
+</pre>
+
+<hr>
+
+<h1>File Handling in Python</h1>
+
+<p>
+File handling in Python allows you to create, read, write,
+append, and manage data stored in files. Python provides
+built-in functions and methods for efficient file operations.
+File handling is essential for storing and processing
+data permanently in Python applications.
+
+<hr>
+
+<h2>1. Opening a File</h2>
+
+<p>
+The <code>open()</code> function is used to open a file and
+returns a file object.
+</p>
+
+<h3>Syntax:</h3>
+
+<pre>
+file_object = open("filename", "mode")
+</pre>
+
+<hr>
+
+<h2>2. File Modes</h2>
+
+<p>
+File modes define the type of operation to be performed on a file.
+</p>
+
+<ul>
+    <li><code>r</code> – Read mode (default)</li>
+    <li><code>w</code> – Write mode (overwrites file)</li>
+    <li><code>a</code> – Append mode</li>
+    <li><code>x</code> – Create mode (error if file exists)</li>
+    <li><code>r+</code> – Read and write</li>
+    <li><code>w+</code> – Write and read</li>
+    <li><code>a+</code> – Append and read</li>
+</ul>
+
+<hr>
+
+<h2>3. Reading from a File</h2>
+
+<h3>Example:</h3>
+
+<pre>
+file = open("data.txt", "r")
+content = file.read()
+print(content)
+file.close()
+</pre>
+
+<hr>
+
+<h2>4. Writing to a File</h2>
+
+<p>
+Write mode creates a new file or overwrites an existing file.
+</p>
+
+<h3>Example:</h3>
+
+<pre>
+file = open("data.txt", "w")
+file.write("Hello Python")
+file.close()
+</pre>
+
+<hr>
+
+<h2>5. Appending to a File</h2>
+
+<p>
+Append mode adds data at the end of the file.
+</p>
+
+<h3>Example:</h3>
+
+<pre>
+file = open("data.txt", "a")
+file.write("\nLearning File Handling")
+file.close()
+</pre>
+
+<hr>
+
+<h1>Four File Handling Functions in Python</h1>
+
+<p>
+Python uses the <code>pickle</code> module to store and retrieve
+Python objects in files. This process is called
+<b>serialization</b> and <b>deserialization</b>.
+These four functions are commonly asked in exams and
+used for advanced file handling in Python.
+</p>
+
+<hr>
+
+<h2>1. dump()</h2>
+
+<p>
+The <code>dump()</code> function writes a Python object
+into a file in binary format.
+</p>
+
+<h3>Syntax:</h3>
+
+<pre>
+pickle.dump(object, file)
+</pre>
+
+<h3>Example:</h3>
+
+<pre>
+import pickle
+
+data = [1, 2, 3]
+file = open("data.pkl", "wb")
+pickle.dump(data, file)
+file.close()
+</pre>
+
+<hr>
+
+<h2>2. load()</h2>
+
+<p>
+The <code>load()</code> function reads a Python object
+from a binary file.
+</p>
+
+<h3>Syntax:</h3>
+
+<pre>
+pickle.load(file)
+</pre>
+
+<h3>Example:</h3>
+
+<pre>
+import pickle
+
+file = open("data.pkl", "rb")
+data = pickle.load(file)
+print(data)
+file.close()
+</pre>
+
+<hr>
+
+<h2>3. dumps()</h2>
+
+<p>
+The <code>dumps()</code> function converts a Python object
+into a byte stream.
+</p>
+
+<h3>Syntax:</h3>
+
+<pre>
+pickle.dumps(object)
+</pre>
+
+<h3>Example:</h3>
+
+<pre>
+import pickle
+
+data = {"a": 10, "b": 20}
+byte_data = pickle.dumps(data)
+print(byte_data)
+</pre>
+
+<hr>
+
+<h2>4. loads()</h2>
+
+<p>
+The <code>loads()</code> function converts byte data
+back into a Python object.
+</p>
+
+<h3>Syntax:</h3>
+
+<pre>
+pickle.loads(byte_data)
+</pre>
+
+<h3>Example:</h3>
+
+<pre>
+import pickle
+
+original_data = pickle.loads(byte_data)
+print(original_data)
+</pre>
+
+<hr>
+
+
+<h1>3. Advanced Python</h1>
+
+<p>
+Advanced Python includes concepts and features that help
+you write optimized, reusable, and efficient code. These
+topics are important for real-world programming and exams.
+</p>
+<h1>Exception Handling in Python</h1>
+
+<p>
+Exception handling in Python is used to handle runtime errors
+so that the program does not crash. It allows graceful
+error handling and improves program reliability.
+    Exception handling is essential for writing robust Python programs
+that do not crash unexpectedly.
+
+</p>
+
+<hr>
+
+<h2>1. try and except</h2>
+
+<p>
+The <code>try</code> block contains code that may raise an exception.
+The <code>except</code> block handles the exception.
+</p>
+
+<h3>Example:</h3>
+
+<pre>
+try:
+    x = 10 / 0
+except ZeroDivisionError:
+    print("Cannot divide by zero")
+</pre>
+
+<hr>
+
+<h2>2. try, except, else</h2>
+
+<p>
+The <code>else</code> block executes if no exception occurs.
+</p>
+
+<h3>Example:</h3>
+
+<pre>
+try:
+    x = 10 / 2
+except ZeroDivisionError:
+    print("Cannot divide by zero")
+else:
+    print("Division successful:", x)
+</pre>
+
+<hr>
+
+<h2>3. try, except, finally</h2>
+
+<p>
+The <code>finally</code> block always executes, whether an exception occurs or not.
+It is usually used for cleanup actions.
+</p>
+
+<h3>Example:</h3>
+
+<pre>
+try:
+    file = open("data.txt", "r")
+except FileNotFoundError:
+    print("File not found")
+finally:
+    print("Execution completed")
+</pre>
+
+<hr>
+
+<h2>4. Raising Exceptions</h2>
+
+<p>
+You can manually raise exceptions using the <code>raise</code> keyword.
+</p>
+
+<h3>Example:</h3>
+
+<pre>
+x = -5
+if x < 0:
+    raise ValueError("x cannot be negative")
+</pre>
+
+<hr>
+
+<h2>5. Common Exception Types</h2>
+
+<ul>
+    <li><code>ZeroDivisionError</code> – Division by zero</li>
+    <li><code>FileNotFoundError</code> – File does not exist</li>
+    <li><code>ValueError</code> – Invalid value</li>
+    <li><code>TypeError</code> – Wrong data type operation</li>
+    <li><code>IndexError</code> – Invalid list index</li>
+    <li><code>KeyError</code> – Invalid dictionary key</li>
+</ul>
+
+<hr>
+
+<h1>Common Python Errors and Exceptions</h1>
+
+<p>
+Python provides different types of errors and exceptions
+that occur during program execution. Understanding them
+helps in debugging and writing robust code.
+</p>
+
+<hr>
+
+<h2>1. SyntaxError</h2>
+
+<p>
+Occurs when Python code is not written correctly according to syntax rules.
+</p>
+
+<h3>Example:</h3>
+
+<pre>
+# Missing colon at the end of if statement
+if 5 > 2
+    print("Hello")
+</pre>
+
+<p><strong>Output:</strong> SyntaxError: invalid syntax</p>
+
+<hr>
+
+<h2>2. ZeroDivisionError</h2>
+
+<p>
+Occurs when a number is divided by zero.
+</p>
+
+<h3>Example:</h3>
+
+<pre>
+x = 10 / 0
+</pre>
+
+<p><strong>Output:</strong> ZeroDivisionError: division by zero</p>
+
+<hr>
+
+<h2>3. NameError</h2>
+
+<p>
+Occurs when a variable or function name is not defined.
+</p>
+
+<h3>Example:</h3>
+
+<pre>
+print(a)  # 'a' is not defined
+</pre>
+
+<p><strong>Output:</strong> NameError: name 'a' is not defined</p>
+
+<hr>
+
+<h2>4. TypeError</h2>
+
+<p>
+Occurs when an operation is performed on an invalid data type.
+</p>
+
+<h3>Example:</h3>
+
+<pre>
+x = "5" + 5
+</pre>
+
+<p><strong>Output:</strong> TypeError: can only concatenate str (not "int") to str</p>
+
+<hr>
+
+<h2>5. ValueError</h2>
+
+<p>
+Occurs when a function receives a valid type but invalid value.
+</p>
+
+<h3>Example:</h3>
+
+<pre>
+int("abc")
+</pre>
+
+<p><strong>Output:</strong> ValueError: invalid literal for int() with base 10: 'abc'</p>
+
+<hr>
+
+<h2>6. IndexError</h2>
+
+<p>
+Occurs when trying to access an index that is out of range in a list or tuple.
+</p>
+
+<h3>Example:</h3>
+
+<pre>
+lst = [1, 2, 3]
+print(lst[5])
+</pre>
+
+<p><strong>Output:</strong> IndexError: list index out of range</p>
+
+<hr>
+
+<h2>7. KeyError</h2>
+
+<p>
+Occurs when trying to access a key that does not exist in a dictionary.
+</p>
+
+<h3>Example:</h3>
+
+<pre>
+d = {"a": 1, "b": 2}
+print(d["c"])
+</pre>
+
+<p><strong>Output:</strong> KeyError: 'c'</p>
 
 <hr>
 
