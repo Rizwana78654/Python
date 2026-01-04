@@ -1,28 +1,26 @@
 
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-</head>
 
 <body>
+<div class="section">
+    <h1> Python Programming</h1>
+    <p>
+        <strong>Python programming</strong> is the process of writing instructions using the Python
+        programming language to communicate with a computer.
+        Python programming is widely used in areas such as
+            web development, data analysis, artificial intelligence,
+            automation, and software development.
+        Python is one of the most popular programming languages in the world.
+        It is widely used in both education and industry because of its simplicity,
+        flexibility, and powerful features.
+    </p>
+</div>
 
-<h1> Python Programming</h1>
-
-<hr>
-
-<h2>Introduction to  Python</h2>
-<p>
-Python is a high-level, interpreted, and general-purpose programming language.
-It is easy to learn and use, making it popular among beginners and professionals.
-Python is widely used in web development, data science, machine learning,
-automation, and software development.
-</p>
-
-<p>
-Python was created by <b>Guido van Rossum</b> and released in 1991.
-</p>
-
-<hr>
+</body>
+</html>
 
 <h2> Index</h2>
 <ul>
@@ -30,12 +28,11 @@ Python was created by <b>Guido van Rossum</b> and released in 1991.
     <li><a href="#intermediate">Intermediate Python Concepts</a></li>
     <li><a href="#advanced">Advanced Python Concepts</a></li>
 </ul>
-
-<hr>
-
 <h2 id="basic"> Basic Python Concepts</h2>
 <ul>
-    <li>Variables and Data Types</li>
+    <li>Variables </li>
+    <li> Data types</li>
+    <li> Type conversions </li>
     <li>Operators</li>
     <li>Libraries</li>
     <li> Built -in- Functions
@@ -45,15 +42,12 @@ Python was created by <b>Guido van Rossum</b> and released in 1991.
     <li>sets</li>
     <li>dictionaries</li>
 </ul>
-
 <hr>
 
 <h2 id="intermediate"> Intermediate Python Concepts</h2>
 <ul>
-    <li>Forloop</li>
-    <li>while loop</li>
-    <li>if,else,elif </li>
-    <li> Break </li>
+    <li>Looping statements</li>
+    <li>control statements </li>
     <li> Functions</li>
     <li>Lambda Functions</li>
     <li>List and Dictionary Comprehensions</li>
@@ -62,9 +56,6 @@ Python was created by <b>Guido van Rossum</b> and released in 1991.
     <li>Exception Handling</li>
     <li>Object-Oriented Programming (OOP)</li>
 </ul>
-
-<hr>
-
 <h2 id="advanced"> Advanced Python Concepts</h2>
 <ul>
     <li>Exception Handling</li>
@@ -81,6 +72,217 @@ Python was created by <b>Guido van Rossum</b> and released in 1991.
     <li>Database Connectivity</li>
     <li>Data Science and Machine Learning</li>
 </ul>
+
+
+<h1>1️. Basic Python</h1>
+<hr>
+
+<p>
+Basic Python concepts form the foundation of Python programming.
+These concepts are essential for beginners to understand how Python works.
+</p>
+
+## Installation of Python
+
+1. Open a web browser
+2. Go to the official Python website:
+   (https://www.python.org)
+3. Click on **Downloads**
+4. Choose the latest **Python 3** version for your operating system
+
+<pre>
+python --version
+</pre>
+
+<h2> Introduction to python</h2>
+<p>
+<b>Python</b> is a high-level, interpreted, and general-purpose programming language.
+It was created by <b>Guido van Rossum</b> and released in <b>1991</b>.
+Python is known for its simple syntax and readability, making it easy to learn
+for beginners.
+
+    
+   Python focuses on code readability and allows programmers to write fewer lines of code compared to many other languages. 
+</p>
+
+<hr>
+
+<h2> Features of Python</h2>
+<ul>
+    <li>Easy to learn and use</li>
+    <li>High-level language</li>
+    <li>Interpreted language</li>
+    <li>Object-oriented</li>
+    <li>Platform independent</li>
+    <li>Large standard library</li>
+    <li>Open-source and free</li>
+</ul>
+
+<hr>
+
+<h2> Why Learn Python?</h2>
+<p>
+Python is one of the most popular programming languages in the world.
+It is widely used in many fields due to its simplicity and power.
+</p>
+
+<ul>
+    <li>Web Development</li>
+    <li>Data Science and Analytics</li>
+    <li>Machine Learning & AI</li>
+    <li>Automation and Scripting</li>
+    <li>Game Development</li>
+    <li>Desktop Applications</li>
+</ul>
+
+<hr>
+
+<h2> First Python Program</h2>
+
+<pre>
+print("Hello, World!")
+</pre>
+
+<p>
+The <b>print()</b> function is used to display output on the screen.
+</p>
+
+<hr>
+
+<h2> Python Syntax Example</h2>
+
+<pre>
+name = "Python"
+version = 3.12
+
+print("Language:", name)
+print("Version:", version)
+</pre>
+
+<hr>
+
+<h2> Applications of Python</h2>
+<ul>
+    <li>Web Applications</li>
+    <li>Scientific Computing</li>
+    <li>Cyber Security</li>
+    <li>Cloud Computing</li>
+    <li>Internet of Things (IoT)</li>
+</ul>
+
+<h1> Comments in Python</h1>
+
+<h2> What are Comments?</h2>
+<p>
+Comments in Python are lines of text used to explain the code.
+They are ignored by the Python interpreter and do not affect program execution.
+</p>
+
+<h2> Why are Comments Important?</h2>
+<ul>
+  <li>Improve code readability</li>
+  <li>Explain complex logic</li>
+  <li>Make code easy to maintain</li>
+  <li>Helpful for teamwork</li>
+</ul>
+
+<h2> Types of Comments in Python</h2>
+
+<h3>1️. Single-Line Comments</h3>
+<p>
+Single-line comments start with the <code>#</code> symbol.
+</p>
+
+<pre><code>
+# This is a single-line comment
+print("Hello, Python")
+</code></pre>
+
+<h3>2️. Inline Comments</h3>
+<p>
+Inline comments are written on the same line as the code.
+</p>
+
+<pre><code>
+x = 10  # Assigning value to x
+</code></pre>
+
+<h3>3️. Multi-Line Comments</h3>
+<p>
+Python does not have a special multi-line comment syntax.
+Triple quotes are commonly used for documentation.
+</p>
+
+<pre><code>
+"""
+This is a multi-line comment
+Used to explain multiple lines
+"""
+print("Python Comments")
+</code></pre>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+</head>
+<body>
+
+<h1>Print Statement in Python</h1>
+
+<h2>What is print()?</h2>
+<p>
+The <strong>print()</strong> function in Python is used to display output on the screen.
+It is one of the most commonly used functions in Python programming.
+</p>
+
+<h2>Syntax</h2>
+<pre>
+print(value)
+</pre>
+
+<h2>Printing a String</h2>
+<pre>
+print("Hello, Python")
+</pre>
+
+<h2>Printing Variables</h2>
+<pre>
+name = "Python"
+version = 3
+print(name)
+print(version)
+</pre>
+
+<h2>Printing Multiple Values</h2>
+<pre>
+a = 10
+b = 20
+print(a, b)
+</pre>
+
+<h2>Using sep Parameter</h2>
+<pre>
+print("Python", "Java", "C", sep=" | ")
+</pre>
+
+<h2>Using end Parameter</h2>
+<pre>
+print("Hello", end=" ")
+print("World")
+</pre>
+
+<h2>Printing Expressions</h2>
+<pre>
+x = 5
+y = 10
+print(x + y)
+</pre>
+
+
+</body>
+</html>
 
 <html>
 <head>
@@ -518,182 +720,94 @@ print(type(x))
 
 <hr>
 
-###  Type Conversion in Python
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+</head>
+<body>
 
-**Type conversion** means changing one data type into another.
-In Python, this is also called **type casting**.
+<h1>Type Conversion Examples in Python</h1>
 
----
+<p>
+Type conversion means changing one data type into another.
+Python provides built-in functions to perform these conversions.
+</p>
 
+<hr>
 
-##  Types of Type Conversion
+<h2>1. Integer to Float</h2>
+<pre>
+a = 10
+b = float(a)
+print(b)
+</pre>
 
-Python supports **two types** of type conversion:
+<p>Output: <strong>10.0</strong></p>
 
-1. **Implicit Type Conversion**
-2. **Explicit Type Conversion**
+<hr>
 
----
+<h2>2. Float to Integer</h2>
+<pre>
+x = 5.9
+y = int(x)
+print(y)
+</pre>
 
-## 1️. Implicit Type Conversion
+<p>
+Note: Decimal part is removed (not rounded).
+</p>
 
-Python automatically converts one data type into another without user involvement.
+<p>Output: <strong>5</strong></p>
 
-### Example:
+<hr>
 
-```python
-a = 10      # int
-b = 2.5     # float
-c = a + b   # int is converted to float
-print(c)
-print(type(c))
-```
+<h2>3. Integer to String</h2>
+<pre>
+num = 100
+text = str(num)
+print(text)
+</pre>
 
-✔ Result will be `float`
+<p>Output: <strong>"100"</strong></p>
 
----
+<hr>
 
-## 2️. Explicit Type Conversion (Type Casting)
+<h2>4. String to Integer</h2>
+<pre>
+value = "25"
+number = int(value)
+print(number)
+</pre>
 
-User manually converts one data type into another using built-in functions.
+<p>Output: <strong>25</strong></p>
 
----
+<hr>
 
-##  Common Type Casting Functions
+<h2>5. String to Float</h2>
+<pre>
+data = "3.14"
+f = float(data)
+print(f)
+</pre>
 
-###  int()
+<p>Output: <strong>3.14</strong></p>
 
-Converts value to integer.
+<hr>
 
-```python
-x = int(3.7)
-y = int("10")
-print(x, y)
-```
+<h2>6. Float to String</h2>
+<pre>
+price = 9.5
+text = str(price)
+print(text)
+</pre>
 
----
+<p>Output: <strong>"9.5"</strong></p>
 
-###  float()
+</body>
+</html>
 
-Converts value to float.
-
-```python
-a = float(5)
-b = float("3.14")
-print(a, b)
-```
-
----
-
-###  str()
-
-Converts value to string.
-
-```python
-x = str(100)
-y = str(3.5)
-print(x, y)
-```
-
----
-
-###  bool()
-
-Converts value to boolean.
-
-```python
-print(bool(1))      # True
-print(bool(0))      # False
-print(bool(""))     # False
-print(bool("Hi"))   # True
-```
-
----
-
-###  list()
-
-Converts sequence to list.
-
-```python
-t = (1, 2, 3)
-l = list(t)
-print(l)
-```
-
----
-
-###  tuple()
-
-Converts sequence to tuple.
-
-```python
-l = [1, 2, 3]
-t = tuple(l)
-print(t)
-```
-
----
-
-###  set()
-
-Converts sequence to set (removes duplicates).
-
-```python
-l = [1, 2, 2, 3]
-s = set(l)
-print(s)
-```
-
----
-
-###  dict()
-
-Converts list of key-value pairs to dictionary.
-
-```python
-pairs = [("a", 1), ("b", 2)]
-d = dict(pairs)
-print(d)
-```
-
----
-
-##  Type Conversion with input()
-
-```python
-age = int(input("Enter your age: "))
-price = float(input("Enter price: "))
-```
-
----
-
-##  Invalid Type Conversion
-
-Some conversions cause errors:
-
-```python
-int("abc")   # Error
-```
-
----
-
-##  Checking Data Type
-
-```python
-x = 10
-print(type(x))
-```
-
----
-
-
-<h2> Why Data Types Are Important?</h2>
-<ul>
-    <li>Efficient memory usage</li>
-    <li>Correct data processing</li>
-    <li>Prevents runtime errors</li>
-    <li>Improves code readability</li>
-</ul>
 
 <html>
 <head>
@@ -881,176 +995,143 @@ print(a | b)
 </pre>
 
 <hr>
-**Bitwise operators** are used to perform operations **directly on binary (bit-level) values**.
-They work by comparing each bit of the numbers involved.
 
----
-
-##  What are Bitwise Operators?
-
-* Operate on **bits (0 and 1)**
-* Numbers are converted to **binary form**
-* Used in **low-level programming**, **optimization**, and **networking**
-
----
-
-##  Binary Representation Example
-
-```text
-5  →  101
-3  →  011
-```
-
----
-
-##  Types of Bitwise Operators in Python
-
-| Operator | Name        | Description                         |                               |
-| -------- | ----------- | ----------------------------------- | ----------------------------- |
-| `&`      | AND         | Sets bit to 1 if both bits are 1    |                               |
-| `        | `           | OR                                  | Sets bit to 1 if any bit is 1 |
-| `^`      | XOR         | Sets bit to 1 if bits are different |                               |
-| `~`      | NOT         | Inverts all bits                    |                               |
-| `<<`     | Left Shift  | Shifts bits to the left             |                               |
-| `>>`     | Right Shift | Shifts bits to the right            |                               |
-
----
-
-## 1️. Bitwise AND (`&`)
-
-Returns 1 if **both bits are 1**.
-
-```python
-a = 5   # 101
-b = 3   # 011
-print(a & b)
-```
-
-**Binary Operation:**
-
-```
-101
-011
----
-001  → 1
-```
-
----
-
-## 2️. Bitwise OR (`|`)
-
-Returns 1 if **any bit is 1**.
-
-```python
-print(a | b)
-```
-
-**Result:**
-
-```
-111 → 7
-```
-
----
-
-## 3️. Bitwise XOR (`^`)
-
-Returns 1 if bits are **different**.
-
-```python
-print(a ^ b)
-```
-
-**Result:**
-
-```
-110 → 6
-```
-
----
-
-## 4️. Bitwise NOT (`~`)
-
-Inverts all bits.
-
-```python
-a = 5
-print(~a)
-```
-
-**Result:**
-
-```
-~5 = -6
-```
-
- Formula: `~n = -(n + 1)`
-
----
-
-## 5️. Left Shift (`<<`)
-
-Shifts bits to the left (multiplies by 2).
-
-```python
-a = 5
-print(a << 1)
-```
-
-**Binary:**
-
-```
-101 << 1 = 1010 → 10
-```
-
----
-
-## 6️. Right Shift (`>>`)
-
-Shifts bits to the right (divides by 2).
-
-```python
-a = 5
-print(a >> 1)
-```
-
-**Binary:**
-
-```
-101 >> 1 = 010 → 2
-```
-
----
-
-##  Bitwise Operator Example Program
-
-```python
-a = 10
-b = 4
-
-print("AND:", a & b)
-print("OR:", a | b)
-print("XOR:", a ^ b)
-print("NOT:", ~a)
-print("Left Shift:", a << 1)
-print("Right Shift:", a >> 1)
-```
-
-##  Where are Bitwise Operators Used?
-
-1. Encryption
-
-2. Data compression
-
-3. Network programming
-
-4. Performance optimization
-
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-  
+    
 </head>
+<body>
+
+<h1>Bitwise Operators in Python</h1>
+
+<p>
+<strong>Bitwise operators</strong> are used to perform operations directly on the
+binary (bit-level) representation of numbers.
+</p>
+
+<hr>
+
+<h2>List of Bitwise Operators</h2>
+
+<table border="1" cellpadding="8">
+    <tr>
+        <th>Operator</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td>&amp;</td>
+        <td>Bitwise AND</td>
+        <td>Sets each bit to 1 if both bits are 1</td>
+    </tr>
+    <tr>
+        <td>|</td>
+        <td>Bitwise OR</td>
+        <td>Sets each bit to 1 if one of the bits is 1</td>
+    </tr>
+    <tr>
+        <td>^</td>
+        <td>Bitwise XOR</td>
+        <td>Sets each bit to 1 if bits are different</td>
+    </tr>
+    <tr>
+        <td>~</td>
+        <td>Bitwise NOT</td>
+        <td>Inverts all the bits</td>
+    </tr>
+    <tr>
+        <td>&lt;&lt;</td>
+        <td>Left Shift</td>
+        <td>Shifts bits to the left</td>
+    </tr>
+    <tr>
+        <td>&gt;&gt;</td>
+        <td>Right Shift</td>
+        <td>Shifts bits to the right</td>
+    </tr>
+</table>
+
+<hr>
+
+<h2>Examples of Bitwise Operators</h2>
+
+<h3>Bitwise AND (&amp;)</h3>
+<pre>
+a = 5   # 0101
+b = 3   # 0011
+print(a & b)
+</pre>
+<p>Output: <strong>1</strong></p>
+
+<hr>
+
+<h3>Bitwise OR (|)</h3>
+<pre>
+a = 5   # 0101
+b = 3   # 0011
+print(a | b)
+</pre>
+<p>Output: <strong>7</strong></p>
+
+<hr>
+
+<h3>Bitwise XOR (^)</h3>
+<pre>
+a = 5
+b = 3
+print(a ^ b)
+</pre>
+<p>Output: <strong>6</strong></p>
+
+<hr>
+
+<h3>Bitwise NOT (~)</h3>
+<pre>
+a = 5
+print(~a)
+</pre>
+<p>Output: <strong>-6</strong></p>
+
+<hr>
+
+<h3>Left Shift (&lt;&lt;)</h3>
+<pre>
+a = 5
+print(a << 1)
+</pre>
+<p>Output: <strong>10</strong></p>
+
+<hr>
+
+<h3>Right Shift (&gt;&gt;)</h3>
+<pre>
+a = 5
+print(a >> 1)
+</pre>
+<p>Output: <strong>2</strong></p>
+
+<hr>
+
+<h2>Why Bitwise Operators are Used?</h2>
+<ul>
+    <li>Low-level programming</li>
+    <li>Performance optimization</li>
+    <li>Cryptography</li>
+    <li>Network programming</li>
+</ul>
+
+<hr>
+
+<h2>Conclusion</h2>
+<p>
+Bitwise operators work at the binary level and are useful for efficient
+and fast computations in Python.
+</p>
+
+</body>
+</html>
 
 <body>
 
@@ -2258,6 +2339,184 @@ students = {
 </table>
 
 <hr>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+</head>
+
+<body>
+
+<h1>2️. Intermediate Python</h1>
+<hr>
+
+<p>
+Intermediate Python concepts help you write <b>efficient</b>, <b>readable</b>,
+and <b>professional</b> Python programs. These topics are essential before
+moving to advanced Python.
+</p>
+
+<hr>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+</head>
+
+<body>
+
+<h1> python Looping Statements </h1>
+<hr>
+
+<h2> What is a Loop?</h2>
+<p>
+A <b>loop</b> is used to execute a block of code repeatedly
+until a specific condition is satisfied.
+Loops help reduce code repetition and improve efficiency.
+</p>
+
+<hr>
+
+<h2> Types of Looping Statements in Python</h2>
+<ul>
+    <li>for loop</li>
+    <li>while loop</li>
+    <li>Nested loops</li>
+</ul>
+
+<hr>
+
+<h2> 1. for Loop</h2>
+<p>
+The <b>for loop</b> is used to iterate over a sequence such as
+a list, tuple, string, or range.
+</p>
+
+<pre>
+for i in range(1, 6):
+    print(i)
+</pre>
+
+<hr>
+
+<h2> 2. while Loop</h2>
+<p>
+The <b>while loop</b> executes as long as the condition is true.
+</p>
+
+<pre>
+i = 1
+while i <= 5:
+    print(i)
+    i += 1
+</pre>
+
+<hr>
+
+<h2> 3. Nested Loops</h2>
+<p>
+A <b>nested loop</b> is a loop inside another loop.
+</p>
+
+<pre>
+for i in range(1, 4):
+    for j in range(1, 4):
+        print(i, j)
+</pre>
+
+<hr>
+
+<h2>Loop Control Statements</h2>
+
+<table border="1" cellpadding="8">
+<tr>
+    <th>Statement</th>
+    <th>Description</th>
+    <th>Example</th>
+</tr>
+
+<tr>
+    <td>break</td>
+    <td>Stops the loop immediately</td>
+    <td>if i == 3: break</td>
+</tr>
+
+<tr>
+    <td>continue</td>
+    <td>Skips current iteration</td>
+    <td>if i == 3: continue</td>
+</tr>
+
+<tr>
+    <td>pass</td>
+    <td>Does nothing (placeholder)</td>
+    <td>pass</td>
+</tr>
+
+</table>
+
+<hr>
+
+<h2> Example Using break</h2>
+
+<pre>
+for i in range(1, 6):
+    if i == 4:
+        break
+    print(i)
+</pre>
+
+<hr>
+
+<h2> Example Using continue</h2>
+
+<pre>
+for i in range(1, 6):
+    if i == 3:
+        continue
+    print(i)
+</pre>
+
+<hr>
+
+<h2> Using else with Loops</h2>
+<p>
+The <b>else</b> block executes when the loop completes normally.
+</p>
+
+<pre>
+for i in range(3):
+    print(i)
+else:
+    print("Loop completed")
+</pre>
+
+<hr>
+
+<h2> Infinite Loop Example</h2>
+<p><b>Note:</b> Use carefully.</p>
+
+<pre>
+while True:
+    print("Hello")
+</pre>
+
+<hr>
+
+<h2> Advantages of Loops</h2>
+<ul>
+    <li>Reduces code repetition</li>
+    <li>Improves readability</li>
+    <li>Saves time and effort</li>
+</ul>
+
+<hr>
+
 
 
 
