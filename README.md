@@ -67,10 +67,7 @@
     <li>Abstraction</li>
     <li>Encapsulation</li>
     <li>Multithreading and Multiprocessing</li>
-    <li>API Integration</li>
-    <li>Database Connectivity</li>
-    <li>Data Science and Machine Learning</li>
-</ul>
+    </ul>
 
 
 <h1>1️. Basic Python</h1>
@@ -3561,8 +3558,161 @@ print(d["c"])
 <p><strong>Output:</strong> KeyError: 'c'</p>
 
 <hr>
+<h1>Object-Oriented Programming (OOP) in Python</h1>
 
+<p>
+Object-Oriented Programming (OOP) allows organizing code using
+classes and objects, making programs modular, reusable, and easier to maintain.
+</p>
 
+<hr>
 
+<h2>1. Class and Object</h2>
+
+<p>
+- <strong>Class:</strong> A blueprint for creating objects.<br>
+- <strong>Object:</strong> An instance of a class.
+</p>
+
+<h3>Example:</h3>
+
+<pre>
+class Person:
+    def greet(self):
+        print("Hello!")
+
+# Creating objects
+p1 = Person()
+p1.greet()
+</pre>
+
+<hr>
+
+<h2>2. The <code>self</code> Keyword</h2>
+
+<p>
+<code>self</code> represents the current instance of the class.
+It is used to access instance variables and methods.
+</p>
+
+<h3>Example:</h3>
+
+<pre>
+class Person:
+    def __init__(self, name):
+        self.name = name
+
+    def greet(self):
+        print("Hello, my name is", self.name)
+
+p1 = Person("Alice")
+p1.greet()
+</pre>
+
+<hr>
+
+<h2>3. Constructor</h2>
+
+<p>
+A constructor is a special method that is called automatically
+when an object is created. In Python, it is <code>__init__()</code>.
+</p>
+
+<h3>Types of Constructors:</h3>
+
+<ul>
+    <li><strong>Default Constructor:</strong> No arguments</li>
+    <li><strong>Parameterized Constructor:</strong> Takes arguments to initialize object</li>
+</ul>
+
+<h3>Examples:</h3>
+
+<pre>
+# Default Constructor
+class Person:
+    def __init__(self):
+        print("Object created")
+
+p1 = Person()
+
+# Parameterized Constructor
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+p2 = Person("Bob", 25)
+print(p2.name, p2.age)
+</pre>
+
+<hr>
+
+<h2>4. Variables in Class</h2>
+
+<ul>
+    <li><strong>Instance Variables:</strong> Belong to the object (using self)</li>
+    <li><strong>Class Variables:</strong> Shared among all objects of a class</li>
+    <li><strong>Local Variables:</strong> Defined inside a method</li>
+</ul>
+
+<h3>Example:</h3>
+
+<pre>
+class Person:
+    species = "Human"  # Class variable
+
+    def __init__(self, name, age):
+        self.name = name  # Instance variable
+        self.age = age
+
+    def info(self):
+        location = "Earth"  # Local variable
+        print(f"{self.name}, {self.age} years old, Species: {Person.species}, Location: {location}")
+
+p1 = Person("Alice", 25)
+p1.info()
+</pre>
+
+<hr>
+
+<h2>5. Functions (Methods) in a Class</h2>
+
+<p>
+A class can have different types of methods (functions) to operate on its data.
+</p>
+
+<ul>
+    <li><strong>Instance Method:</strong> Operates on object data (uses self)</li>
+    <li><strong>Class Method:</strong> Uses <code>@classmethod</code>, operates on class variables</li>
+    <li><strong>Static Method:</strong> Uses <code>@staticmethod</code>, does not access instance or class variables</li>
+</ul>
+
+<h3>Example:</h3>
+
+<pre>
+class Person:
+    species = "Human"  # Class variable
+
+    def __init__(self, name):
+        self.name = name  # Instance variable
+
+    def instance_method(self):
+        print(f"My name is {self.name}")
+
+    @classmethod
+    def class_method(cls):
+        print(f"Species is {cls.species}")
+
+    @staticmethod
+    def static_method():
+        print("This is a static method")
+
+p1 = Person("Alice")
+p1.instance_method()  # Instance method
+Person.class_method()  # Class method
+Person.static_method() # Static method
+</pre>
+
+<hr>
 
 
