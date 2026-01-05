@@ -2803,6 +2803,105 @@ def factorial(n):
 print(factorial(5))
 </pre>
 
+<h1>Local and Global Variables in Python</h1>
+
+<p>
+Variables in Python are classified based on their scope.
+The two main types are <strong>local variables</strong> and
+<strong>global variables</strong>.
+</p>
+
+<hr>
+
+<h2> Local Variables</h2>
+
+<p>
+A local variable is defined inside a function and can be accessed
+only within that function.
+</p>
+
+<h3>Example:</h3>
+
+<pre><code>
+def my_function():
+    x = 10      # local variable
+    print(x)
+
+my_function()
+</code></pre>
+
+<p>
+Here, <code>x</code> is a local variable and cannot be accessed
+outside the function.
+</p>
+
+<hr>
+
+<h2> Global Variables</h2>
+
+<p>
+A global variable is defined outside all functions and can be accessed
+anywhere in the program.
+</p>
+
+<h3>Example:</h3>
+
+<pre><code>
+x = 20   # global variable
+
+def my_function():
+    print(x)
+
+my_function()
+print(x)
+</code></pre>
+
+<hr>
+
+<h2> Using Global Variable Inside a Function</h2>
+
+<p>
+To modify a global variable inside a function,
+the <code>global</code> keyword is used.
+</p>
+
+<h3>Example:</h3>
+
+<pre><code>
+x = 5
+
+def update():
+    global x
+    x = 10
+
+update()
+print(x)
+</code></pre>
+
+<hr>
+
+<h2> Difference Between Local and Global Variables</h2>
+
+<table border="1" cellpadding="8">
+  <tr>
+    <th>Local Variable</th>
+    <th>Global Variable</th>
+  </tr>
+  <tr>
+    <td>Declared inside a function</td>
+    <td>Declared outside a function</td>
+  </tr>
+  <tr>
+    <td>Accessible only within the function</td>
+    <td>Accessible throughout the program</td>
+  </tr>
+  <tr>
+    <td>Destroyed after function execution</td>
+    <td>Exists until program ends</td>
+  </tr>
+</table>
+
+
 <hr>
 
 <p>
