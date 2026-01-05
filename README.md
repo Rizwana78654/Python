@@ -90,7 +90,7 @@ These concepts are essential for beginners to understand how Python works.
 python --version
 </pre>
 
-<h2> Introduction to python</h2>
+<h1> Introduction to python</h1>
 <p>
 <b>Python</b> is a high-level, interpreted, and general-purpose programming language.
 It was created by <b>Guido van Rossum</b> and released in <b>1991</b>.
@@ -2785,7 +2785,7 @@ print(square(5))
 
 <hr>
 
-<h2>7. Recursive Functions</h2>
+<h2>3. Recursive Functions</h2>
 
 <p>
 A recursive function is a function that calls itself.
@@ -3717,5 +3717,561 @@ Person.static_method() # Static method
 </pre>
 
 <hr>
+<h1>Inheritance in Python</h1>
+
+<p>
+Inheritance is an important concept in Object-Oriented Programming (OOP).
+It allows a class (child class) to acquire the properties and methods
+of another class (parent class).
+</p>
+
+<hr>
+
+<h2> What is Inheritance?</h2>
+
+<p>
+Inheritance promotes <strong>code reusability</strong> and
+helps in creating a hierarchical relationship between classes.
+    Inheritance is a core concept of OOP in Python.
+</p>
+
+<hr>
+
+<h2> Syntax of Inheritance</h2>
+
+<pre>
+class ChildClass(ParentClass):
+    # class body
+</pre>
+
+<hr>
+
+<h2>1. Single Inheritance</h2>
+
+<p>
+A child class inherits from one parent class.
+</p>
+
+<h3>Example:</h3>
+
+<pre>
+class Parent:
+    def show(self):
+        print("This is Parent class")
+
+class Child(Parent):
+    def display(self):
+        print("This is Child class")
+
+c = Child()
+c.show()
+c.display()
+</pre>
+
+<hr>
+
+<h2>2. Multiple Inheritance</h2>
+
+<p>
+A child class inherits from more than one parent class.
+</p>
+
+<h3>Example:</h3>
+
+<pre>
+class Father:
+    def father_method(self):
+        print("Father class method")
+
+class Mother:
+    def mother_method(self):
+        print("Mother class method")
+
+class Child(Father, Mother):
+    def child_method(self):
+        print("Child class method")
+
+c = Child()
+c.father_method()
+c.mother_method()
+c.child_method()
+</pre>
+
+<hr>
+
+<h2>3. Multilevel Inheritance</h2>
+
+<p>
+A class inherits from another child class.
+</p>
+
+<h3>Example:</h3>
+
+<pre>
+class GrandParent:
+    def gp_method(self):
+        print("Grand Parent class")
+
+class Parent(GrandParent):
+    def p_method(self):
+        print("Parent class")
+
+class Child(Parent):
+    def c_method(self):
+        print("Child class")
+
+c = Child()
+c.gp_method()
+c.p_method()
+c.c_method()
+</pre>
+
+<hr>
+
+<h2>4. Hierarchical Inheritance</h2>
+
+<p>
+Multiple child classes inherit from a single parent class.
+</p>
+
+<h3>Example:</h3>
+
+<pre>
+class Parent:
+    def parent_method(self):
+        print("Parent class method")
+
+class Child1(Parent):
+    def child1_method(self):
+        print("Child1 class method")
+
+class Child2(Parent):
+    def child2_method(self):
+        print("Child2 class method")
+
+c1 = Child1()
+c2 = Child2()
+c1.parent_method()
+c2.parent_method()
+</pre>
+
+<hr>
+
+<h2>5. Hybrid Inheritance</h2>
+
+<p>
+Hybrid inheritance is a combination of two or more types
+of inheritance.
+</p>
+
+<h3>Example:</h3>
+
+<pre>
+class A:
+    def method_a(self):
+        print("Class A")
+
+class B(A):
+    def method_b(self):
+        print("Class B")
+
+class C(A):
+    def method_c(self):
+        print("Class C")
+
+class D(B, C):
+    def method_d(self):
+        print("Class D")
+
+d = D()
+d.method_a()
+d.method_b()
+d.method_c()
+d.method_d()
+</pre>
+
+<hr>
+
+<h1>Polymorphism in Python</h1>
+
+<p>
+Polymorphism means <strong>one name, many forms</strong>.
+In Python, polymorphism is mainly achieved using
+<strong>method overloading</strong> and
+<strong>method overriding</strong>.
+</p>
+
+<hr>
+
+<h2>1. Method Overloading</h2>
+
+<p>
+Method overloading means defining multiple methods with the same name
+but different parameters.
+</p>
+
+<p>
+<strong>Note:</strong> Python does not support method overloading directly.
+Instead, it is achieved using default arguments or variable-length arguments.
+</p>
+
+<h3>Example using Default Arguments:</h3>
+
+<pre><code>
+class MathOperations:
+    def add(self, a, b=0, c=0):
+        return a + b + c
+
+obj = MathOperations()
+print(obj.add(5))
+print(obj.add(5, 10))
+print(obj.add(5, 10, 15))
+</code></pre>
+
+<h3>Example using *args:</h3>
+
+<pre><code>
+class Calculator:
+    def add(self, *args):
+        total = 0
+        for num in args:
+            total += num
+        return total
+
+c = Calculator()
+print(c.add(10, 20))
+print(c.add(1, 2, 3, 4))
+</code></pre>
+
+<hr>
+
+<h2>2. Method Overriding</h2>
+
+<p>
+Method overriding occurs when a child class provides
+its own implementation of a method defined in the parent class.
+</p>
+
+<h3>Example:</h3>
+
+<pre><code>
+class Animal:
+    def speak(self):
+        print("Animal makes a sound")
+
+class Dog(Animal):
+    def speak(self):
+        print("Dog barks")
+
+class Cat(Animal):
+    def speak(self):
+        print("Cat meows")
+
+a = Animal()
+d = Dog()
+c = Cat()
+
+a.speak()
+d.speak()
+c.speak()
+</code></pre>
+
+<hr>
+
+<h2> Difference Between Overloading and Overriding</h2>
+
+<table border="1" cellpadding="8">
+  <tr>
+    <th>Overloading</th>
+    <th>Overriding</th>
+  </tr>
+  <tr>
+    <td>Same method name, different parameters</td>
+    <td>Same method name, same parameters</td>
+  </tr>
+  <tr>
+    <td>Occurs within the same class</td>
+    <td>Occurs in parent-child classes</td>
+  </tr>
+  <tr>
+    <td>Not directly supported in Python</td>
+    <td>Fully supported in Python</td>
+  </tr>
+</table>
+
+<hr>
+
+<h2> How Polymorphism is Useful</h2>
+
+<ul>
+  <li>Improves code flexibility</li>
+  <li>Supports code reusability</li>
+  <li>Allows same interface for different behaviors</li>
+  <li>Makes programs easier to maintain and extend</li>
+</ul>
+
+<hr>
+
+<h1>Abstraction in Python</h1>
+
+<p>
+Abstraction is an Object-Oriented Programming concept that
+<strong>hides implementation details</strong> and
+shows only the essential features to the user.
+</p>
+
+<hr>
+
+<h2> What is Abstraction?</h2>
+
+<p>
+Abstraction focuses on <strong>what an object does</strong>
+rather than <strong>how it does it</strong>.
+It improves security and reduces complexity.
+</p>
+
+<hr>
+
+<h2> Abstract Classes</h2>
+
+<p>
+In Python, abstraction is achieved using
+<strong>abstract classes</strong> and the
+<code>abc</code> module.
+</p>
+
+<h3>Key Points:</h3>
+<ul>
+  <li>An abstract class cannot be instantiated</li>
+  <li>It may contain abstract methods</li>
+  <li>Abstract methods have no body</li>
+</ul>
+
+<hr>
+
+<h2> Creating an Abstract Class</h2>
+
+<pre><code>
+from abc import ABC, abstractmethod
+
+class Vehicle(ABC):
+
+    @abstractmethod
+    def start(self):
+        pass
+</code></pre>
+
+<hr>
+
+<h2> Implementing Abstract Methods</h2>
+
+<p>
+Child classes must implement all abstract methods
+of the abstract class.
+</p>
+
+<pre><code>
+class Car(Vehicle):
+    def start(self):
+        print("Car starts with key")
+
+class Bike(Vehicle):
+    def start(self):
+        print("Bike starts with kick")
+
+c = Car()
+b = Bike()
+
+c.start()
+b.start()
+</code></pre>
+
+<hr>
+
+<h2> Abstraction Using Interface Concept</h2>
+
+<p>
+Python does not have interfaces like Java,
+but abstract classes act as interfaces.
+</p>
+
+<pre><code>
+from abc import ABC, abstractmethod
+
+class Bank(ABC):
+
+    @abstractmethod
+    def interest_rate(self):
+        pass
+
+class SBI(Bank):
+    def interest_rate(self):
+        print("SBI Interest Rate: 6%")
+
+class HDFC(Bank):
+    def interest_rate(self):
+        print("HDFC Interest Rate: 6.5%")
+
+s = SBI()
+h = HDFC()
+
+s.interest_rate()
+h.interest_rate()
+</code></pre>
+
+<hr>
+
+<h2> Advantages of Abstraction</h2>
+
+<ul>
+  <li>Hides complex implementation details</li>
+  <li>Improves security</li>
+  <li>Enhances code readability</li>
+  <li>Supports loose coupling</li>
+</ul>
+
+<hr>
+
+<h1>Production Python: Multithreading and Multiprocessing</h1>
+
+<p>
+In production environments, Python applications must handle
+multiple tasks efficiently. Multithreading and multiprocessing
+are used to improve performance and responsiveness.
+</p>
+
+<hr>
+
+<h2> Why Concurrency is Important in Production</h2>
+
+<ul>
+  <li>Handles multiple user requests simultaneously</li>
+  <li>Improves application performance</li>
+  <li>Efficient resource utilization</li>
+</ul>
+
+<hr>
+
+<h2>1. Multithreading in Production</h2>
+
+<p>
+Multithreading allows multiple threads to run within the same process.
+Threads share memory and are suitable for <strong>I/O-bound tasks</strong>.
+</p>
+
+<h3>Common Use Cases:</h3>
+<ul>
+  <li>File handling</li>
+  <li>Network requests</li>
+  <li>Database operations</li>
+</ul>
+
+<h3>Example:</h3>
+
+<pre><code>
+import threading
+
+def handle_request():
+    print("Handling request")
+
+threads = []
+for i in range(3):
+    t = threading.Thread(target=handle_request)
+    threads.append(t)
+    t.start()
+
+for t in threads:
+    t.join()
+</code></pre>
+
+<hr>
+
+<h2>2. Multiprocessing in Production</h2>
+
+<p>
+Multiprocessing uses multiple processes, each with its own memory space.
+It is ideal for <strong>CPU-bound tasks</strong>.
+</p>
+
+<h3>Common Use Cases:</h3>
+<ul>
+  <li>Data processing</li>
+  <li>Image processing</li>
+  <li>Scientific computations</li>
+</ul>
+
+<h3>Example:</h3>
+
+<pre><code>
+import multiprocessing
+
+def process_task():
+    print("Processing data")
+
+processes = []
+for i in range(3):
+    p = multiprocessing.Process(target=process_task)
+    processes.append(p)
+    p.start()
+
+for p in processes:
+    p.join()
+</code></pre>
+
+<hr>
+
+<h2> Multithreading vs Multiprocessing</h2>
+
+<table border="1" cellpadding="8">
+  <tr>
+    <th>Multithreading</th>
+    <th>Multiprocessing</th>
+  </tr>
+  <tr>
+    <td>Uses threads</td>
+    <td>Uses processes</td>
+  </tr>
+  <tr>
+    <td>Shared memory</td>
+    <td>Separate memory</td>
+  </tr>
+  <tr>
+    <td>Best for I/O-bound tasks</td>
+    <td>Best for CPU-bound tasks</td>
+  </tr>
+  <tr>
+    <td>Lower memory usage</td>
+    <td>Higher memory usage</td>
+  </tr>
+</table>
+
+<hr>
+
+<h2> Best Practices in Production</h2>
+
+<ul>
+  <li>Use threading for I/O-heavy operations</li>
+  <li>Use multiprocessing for heavy computations</li>
+  <li>Avoid race conditions using locks</li>
+  <li>Monitor performance and resource usage</li>
+</ul>
+
+<hr>
+
+<h2>Summary</h2>
+
+<ul>
+  <li>Concurrency is essential in production Python</li>
+  <li>Multithreading improves responsiveness</li>
+  <li>Multiprocessing improves CPU utilization</li>
+  <li>Choosing the right approach improves scalability</li>
+</ul>
+
+
+
+
+
+
+
 
 
